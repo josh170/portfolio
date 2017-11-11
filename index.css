@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Remove default browser margins and padding */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  height:100%;
+}
+.nav {
+  background-color: white;
+  padding: 0px 0px;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #5c6772;
+  max-height: 90%;
+  overflow: hidden;
+  text-decoration: none;
+}
+.nav h1{
+  display: flex;
+  white-space: nowrap;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+.box {
+  display: block;
+  background-image: url(star.jpeg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 80px;
+  height: 620px;
+  left: 0;
+  z-index: -1;
+}
+
+.box-text h1{
+  color: white;
+  text-align: center;
+  z-index: 5;
+  font-size:45px;
+  margin-top: 60px;
+  padding-top: 120px;
+}
+.box-text h4{
+  color: white;
+  text-align: center;
+  z-index: 5;
+  font-size:25px;
+  margin-top: 0;
+  padding-bottom: 50px;
+}
+.box2 {
+  border-top: 1px solid black;
+  display: block
+  background-color: white;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1500px;
+  height: 200px;
+  left: 0;
+  z-index: -1;
+}
+.box-text2 h1{
+  color: black;
+  text-align: center;
+  z-index: 5;
+  font-size:45px;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+.box-text2 h4{
+  padding-top: 40px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  text-align: center;
+  z-index: 5;
+  font-size:25px;
+  margin-top: 0;
+  padding-bottom: 50px;
+}
+.ucsd-nav-left {
+  float: left;
+  max-width: 100px;
+}
+.ucsd-nav-right {
+  font-size: 28px;
+  float: right;
+  position: center;
+}
+.ucsd-nav-content {
+  margin: auto;
+  max-width: 1150px;
+  max-height: 100px;
+}
+.ucsd-nav-right {
+  list-style-type: block;
+  padding-left: 0;
+  /* Change location of bar in  nav bar*/
+  margin: 1.9%;
+  top: 3%;
+}
+.ucsd-nav-right__item {
+  display: inline-block;
+}
+.ucsd-nav-right__item {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  color: #5c6772;
+  cursor: pointer; /* Tells the browser that the cursor should be a pointer on hover */
+}
+.ucsd-nav-right__item:hover{
+  color:#040505;
+}
+.ucsd-nav-right__item .ucsd-button {
+  padding: 0 20px;
+  margin: 0 10px;
+  color: white;
+  height: 0px;
+}
+.row{
+  display: block;
+  width:100%;
+  height: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.row h1{
+  font-size:45px;
+  padding-bottom: 55px;
+}
+.insert{
+  float:none;
+ margin-left:auto;
+ margin-right:auto;
+  width: 900px;
+
+}
+.container{
+  height:650px;
+  width:100%;
+}
+
+.col-sm-4 p{
+  font-size: 22px;
+  padding-top: 10px;
+}
+ #footer{
+  top:300px;
+  border-top: 1px solid black;
+  background-color: white;
+  color: black;
+  text-align: center;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 50px;
+  margin-top: -3em;
+}
+div#footer{
+  height: 65px;
+}
+#footer p{
+  font-size: 18px;
+  color: black;
+  padding-top: 15px;
+}
+
+
