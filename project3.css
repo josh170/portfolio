@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Remove default browser margins and padding */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  height:100%;
+}
+.nav {
+  background-color: white;
+  padding: 0px 0px;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #5c6772;
+  max-height: 90%;
+  overflow: hidden;
+  text-decoration: none;
+}
+.nav h1{
+  display: flex;
+  white-space: nowrap;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.ucsd-nav-left {
+  float: left;
+  max-width: 100px;
+}
+.ucsd-nav-right {
+  font-size: 28px;
+  float: right;
+  position: center;
+}
+.ucsd-nav-content {
+  margin: auto;
+  max-width: 1150px;
+  max-height: 100px;
+}
+.ucsd-nav-right {
+  list-style-type: block;
+  padding-left: 0;
+  /* Change location of bar in  nav bar*/
+  margin: 1.9%;
+  top: 3%;
+}
+.ucsd-nav-right__item {
+  display: inline-block;
+}
+.ucsd-nav-right__item {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  color: #5c6772;
+  cursor: pointer; /* Tells the browser that the cursor should be a pointer on hover */
+}
+.ucsd-nav-right__item:hover{
+  color:#040505;
+}
+.ucsd-nav-right__item .ucsd-button {
+  padding: 0 20px;
+  margin: 0 10px;
+  color: white;
+  height: 0px;
+}
+.project{
+	padding-top:0px;
+	margin:auto;
+	padding: auto;
+	width: 800px;
+	height: 680px;
+}
+.project h1 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.row{
+	margin: auto;
+	padding-right: 10px;
+	text-align: center;
+}
+.detail{
+	border-top: 1px solid black;
+	width:1000px;
+	text-align: center;
+	margin: auto;
+}
+.pro-detail{
+	padding-top: 15px;
+	margin:auto;
+	padding: auto;
+	top: 90px;
+	width: 800px;
+	height: 6700px;
+}
+.pro-detail h4{
+	padding-top: 18px;
+	font-size: 22px;
+}
+.pro-detail p{
+	display: inline;
+	width:20px;
+	font-size: 22px;
+}
+
+ #footer{
+  background-color: #050C4E;
+  color: black;
+  text-align: center;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 70px;
+  margin-top: -3em;
+}
+div#footer{
+  height: 75px;
+}
+#footer p{
+  font-size: 22px;
+  color: white;
+  padding-top: 20px;
+}
+li{
+  font-size: 18px;
+}

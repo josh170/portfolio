@@ -4,7 +4,7 @@
     <TITLE>Data Science Project</TITLE>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <link href="project2.css" rel="stylesheet">
+    <link href="project3.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -26,70 +26,56 @@
   <div class="project">
     <h1>Project: Data Science Project</h1>
     <div class="row">
-      <div class="col-sm-6"><img class="img-responsive" style="height: 580px" src="music3.png"/></div>
-      <div class="col-sm-6"><img class="img-responsive" style="height: 580px" src="music2.png"/></div>
+      <div class="col-sm-12"><img class="img-responsive" style="height: auto; width: auto" src="dse.jpeg"/></div>
     </div>
   </div>
   <div class="detail"></div>
     <div class="pro-detail">
       <h3>Assignment: </h3><p> Class project for COGS 108: Data Science in Practice.</br> Project completed in 2 months in a team of 6 people. </br></p>
-      <h3>Task: </h3><p> 1. Analyze the major streaming music application at the time</br>2. Redesign a mobile music app with playlist management  </p>
-      <h3>My Role: </h3><p> I conducted user interviews, compared user experience of user scenarios, completed competitive analysis of information architecture, help create wireframes, and completed QA testing of the prototype.</br> </p>
-      <h3>Design Process </h3>
-      <h4>User Interviews:</h4>
-      <p> We interviewed 9 people who regularly listened to music on their mobile phone and actively use a streaming music platform. Many of the questions involved playlist management and if he or she had any frustrations with their music application.</br> 
-
-      </br>These were some of the questions we asked:</br></p>
-        <ul type="disc">
-        </br>
-          <li>Do you listen to music using a streaming service (such as Spotify, Apple music)?</li>
-          <li>What do you like about your music streaming app?</li>
-          <li>What you dislike or find frustrating about your music streaming app?</li>
-          <li>How do you discover new music?</li>
-        </ul>
-
-      <p></br>From our 9 interviews, we were able to find a total of 9 distict user scenarios based on each person's interview. The user scenarios helped us predict how users will interact with our application in order to complete a goal.</p>
-      <h4>User Senarios:</h4>
+      <h3>Research Question: </h3><p> What housing services are most successful in transitioning homeless individuals into permanent housing, ultimately preventing them from returning to homelessness? How have specific counties in California managed its homeless resources across each region and which areas in California are using its resources to full potential? </p>
+      <h3>My Role: </h3><p> Data Cleaning, Data Analysis, and Data Visualization.</br> </p>
+      <h3>Research Process </h3>
+      <h4>Hypothesis:</h4>
+      <p> We hypothesize that counties that have a higher distribution of services that focus on providing long-term housing solutions like Permanent Supportive Housing will show a decrease in the overall homeless population over time we also want to see if change in years of service and population influence one another.</br> 
+      <h4>Data Description:</h4>
       <div class="row">
-          <div class="col-sm-12"><img class="img-responsive" style="height: 1000px; width: 100%;" src="screen.pdf"/></div>
+          <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data1.png"/></div>
         </div>
-      <p> From our 9 user scenarios, we compared the steps taken on Spotify, Amazon Music, Soundcloud, Ganna, and Apple Music. 
-      </br></br>These were some of our user senarios:</br></p>
-        <ul type="disc">
-        </br>
-          <li>Re-ordering songs in a playlist</li>
-          <li>Deleting a song from a playlist</li>
-          <li>Renaming a playlist</li>
-          <li>Creating a playlist for a Dance Party</li>
-        </ul>
-        <p></br>Once we completed the user senarios on two different music apps, we compared the workflows for each senario and labeled which app had a better user experience. In the screenshot above Spotify has a better user experience for this scenario compared to Amazon Music.
-        </p>
+      <p> </br>We utilizied data provided by the Department of Housing and Urban Development including 1) data from the Homeless Population (PIT) and 2) data from the Housing Inventory (HIC) for the years 2007-2016.</p></br></br><a href="https://www.hudexchange.info/resource/3031/pit-and-hic-data-since-2007/" style="font-size: 20px;">Data Source</a>
         
-      <h4>Competitive Analysis:</h4>
+      <h4>Data Cleaning/Pre-processing:</h4>
       <div class="row">
-          <div class="col-sm-12"><img class="img-responsive" style="height: 1000px; width: 100%;" src="screen2.pdf"/></div>
+          <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data3.png"/></div>
         </div>
-      <p>For three of the music applications, Amazon Music, Apple Music, and Spotify, we compared how each of the three apps displayed their navigation structures and how they classified their genres and non-genres. The screenshot above shows our hierarchical sitemap for Amazon Music with key page details showing the main pages of the app.
+      <p></br>The first step to cleaning the homelessness data was to load it into the excel sheets. We loaded in the excel sheet by year from 2007-2016 into the data frame. Since our data came from two excel sheets, we had to merge the data into one single data frame for the PIT and HIC. We did this my first renaming the HIC CoC to CoC number. This merging of the data frame allowed us to to more easily extract the data into graphs when we were exploring and graphing it. Next we extracted the CoC Number from the Total Homeless, Total Year-Round ES beds, Total TH Beds, and Total PSH Beds for each year in order to make each of the feature into a proportion to be placed into a Data Frame. Within our code, the proportions for each were placed into a matrix through the method “append”, so we would not lose the new value we just had calculated and to make it easier to grab when we were doing data visualization. This process allowed us to show a clearer and smaller table for the homelessness data we had originally had from the raw excel sheet. </br></br>For the next part, we placed the current data frame we had into a new one, so we could modify the new one without changing the current data. This allows us to explore and test the data without fear of losing the original data. At this point in the data cleaning, we are ready to start the process of analyzing some of the data, so the next part of our code takes head and tail (first five and last five part of our data set). We took the homelessness population and housing services interval of one year in order to create the data. We created a loop to go into all the CoC number to create a delta for each of the years. Then we placed all the years into a list and used panda series to get the rows of the data. We grabbed the ES, TH, and PSH proportions from ES, TH, PSH data for each year and each county. The code then explores the one and two year change between the ES, PSH, and TH by looking at the satisfaction rating to look at how the county are doing with their homelessness problem.
       </p>
 
-      <h4>Wireframes:</h4>
+      <h4>Data Visualization:</h4>
       <div class="row">
-        <div class="col-sm-6"><img class="img-responsive" style="height: 600px; width: 100%;" src="flow3.jpg"/></div>
-        <div class="col-sm-6"><img class="img-responsive" style="height: 600px; width: 100%;" src="flow4.jpg"/></div>
+        <div class="col-sm-6"><img class="img-responsive" style="height:100%; width: 100%;" src="data4.png"/></div>
+        <div class="col-sm-6"><img class="img-responsive" style="height: 100%; width: 100%;" src="data5.png"/></div>
       </div>
-      <p></br>We created our wireframe for two activies based on our analysis of our user scenarios: Creating a playlist and Managing a playlist. We also decided to design the navigation of our application in a way that is extremely intuitive and simple, in our interviews, we had multiple interviewees struggle to differentiate the two search bars in Spotify they were unsure if they were searching the playlist that was currently in scope or if they were going to search Spotify’s catalog. Additionally, interviewees struggled at finding the search bar in Spotify when in a playlist. So we tried to address that by letting users choose where he or she wants to search.</p>
+      <p>For the initial data visualization, in order to detect if we could see any overall trends, we plotted how the proportion of each housing service increased or decreased over the nine year period (2007-2016) for each individual county. These graphs were separated by housing service type: Emergency Shelter, Transitional Housing, and Permanent Supportive Housing.
+      </br></br>We compared each county’s change in reported homeless populations over the same time period. From this plot, we can see that Los Angeles (CA 600) county’s homeless population far exceeds any other California county.
+      </br></br>Because our first four graphs depicted nearly 40 different county’s data, it was a bit overwhelming to look at which prevented us from noticing any interesting trajectories. We decided to break the data into more manageable chunks by instead plotting the ES, TH, and PSH proportions of each county onto their own graph. Underneath each graph, we plotted the corresponding change in homeless population for the respective counties to see if we can visually see any trends.
+      </br></br>We chose to look at the counties with the largest change in homeless population size, seven in the increasing and seven in the decreasing directions.</p>
       
-      <h4>Challenges:</h4>
-      <p>In our exploration of music streaming apps, we noticed many minor differences between music apps; however, one “feature” that seemed to be prevalent throughout all the music apps is that we could only add a song to each individual playlist at a time. We also observed this during our interviews, many users seemed to have the same song in multiple playlist and when we observed users adding songs into their playlists, users mentioned that a pain point across all music applications is the inability to add songs to multiple existing playlist. So we decided that this would be a good pain point to relieve in our re-design. In the re-design, clicking on the three vertical dots next to each song will be up a pop-up box that has an option to add that song to a playlist. After a user clicks the "add song to playlist” a new pop-up box with a list of existing playlists and the user can select as many playlist(s) as he or she wants to put that song into. We also struggled with the design for the navigation bar as well - specifically how many items to place in the navigation bar and where to place it. Many competing applications have 4 - 5 items in their navigational bars, but many of the options remain unused. In all of our interviews only three items were consistently used: Browse, My Music, and Search. We decided to declutter our navigation bar and bring it down to just the most basic two options: Browse and My Music. The essence of a music app is to find and store music in a classified manner and we tried to stay true to that by simplfying the navigation on the bottom.</p>
+      <h4>Data Analysis and Results:</h4>
+      <div class="row">
+          <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data6.png"/></div>
+          <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data7.png"/></div>
+        </div>
+      <p></br>First we completed linear regressions on our three different types of services as independent variable to see if we could find statistical significant from the services. After running linear regression the p-value we calculated shows that there is no statistical significance; however, the linear regression showed that the three different types of services were highly correlated. Due to this discovery, we decided to run a pearson's correlational r test on the services which supported our previous finding.
+      </br></br>Since the data that we have has many variable we decided that we might need to try and use dimensionality reduction: that is to try and find a lower dimensional space that captures as much of the information as we can from the original, high-dimensional, dataset.</p>
 
-      <h4>Conclusions:</h4>
-       <p>Conducting user research was essential to help us address fundamental issues and gather data on how users use the product. User scenarios allowed us to predict how users will interact with the product and it helped us learn and understand the goals and motivations of the user. Creating a competitive analysis with multiple music applications showed us what good user experience and flow looks like and helped us redesign and improve the experience. Overall, I learned ideations extremely important, but thorough user research is the foundation to creating an enjoyable user experience.</p>
+      <h4>Challenges, Discussion, and Conclusions:</h4>
+       <p>After gathering, cleaning, and exploring our data, our data analysis did not lead us to any conclusive finding about whether different housing services provided have any significant effect on reducing the homeless population. Our attempt at running PCA on our data gave us results that were not easily interpretable, and thus require more extensive analysis to understand any possible present correlations. With analyzing data to a incredibly complex crisis such as homelessness it of course falls into potential confounds that can have an effect on our analysis. One issue with collecting data on homelessness in general is actually getting concrete data since those falling in and out of homelessness is so dynamic and changes constantly. We have to assume that the data we have received is an incomplete picture of the true population of homeless individuals in San Diego. Essentially what we have received is just a sample at a particular point of time and we are making observations based on that and assuming that the observations can be extended beyond those temporal and physical boundaries. In addition, data collected from HUD through the HMIS is incomplete as most people utilize the system (required to input data into the system if receiving funding from HUD), yet not all organizations that are servicing the homeless are utilizing this system (receiving funds from somewhere other than HUD). So that is valuable data again that we are missing.</p>
 
       <h4>Final Product:</h4>
     </br>
     </br>
       <div class="row">
-        <a href="https://projects.invisionapp.com/share/T9ER15CY2#" style="font-size: 24px;"><img class="img-responsive" style="width: auto; margin: auto;" src="music1.png"/>Invision</div></a>
+        <a href="https://github.com/josh170/DataScienceProject" style="font-size: 24px;"><img class="img-responsive" style="width: 40%; margin: auto;" src="data.jpeg"/>Github</div></a>
       </div>
     </div>
   <div id="footer">
