@@ -100,9 +100,9 @@ html, body {
 	width: 800px;
 	height: 5700px;
 }
-.pro-detail h4{
+.pro-detail h3{
 	padding-top: 18px;
-	font-size: 22px;
+	font-size: 24px;
 }
 .pro-detail p{
 	display: inline;
