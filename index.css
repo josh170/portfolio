@@ -52,7 +52,7 @@ html, body {
   color: white;
   text-align: center;
   z-index: 5;
-  font-size: 25px;
+  font-size: 32px;
   margin-top: 0;
   padding-bottom: 50px;
 }
@@ -78,6 +78,7 @@ html, body {
   padding-top: 55px;
 }
 .box-text2 h4{
+  font-weight: normal;
   padding-top: 50px;
   width: 900px;
   margin-left: auto;
@@ -86,7 +87,7 @@ html, body {
   text-align: center;
   z-index: 5;
   line-height: 35px;
-  font-size:25px;
+  font-size:18px;
   margin-top: 0;
   padding-bottom: 50px;
 }
