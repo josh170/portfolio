@@ -16,8 +16,9 @@
         </div>
         <div class="ucsd-nav-right">
           <a href = "index.html"><li class="ucsd-nav-right__item">Home</li></a>
-          <a href="index.html#project"><li class="ucsd-nav-right__item">Projects</li></a>
-          <a href="index.html#about"><li class="ucsd-nav-right__item">About Me</li></a>
+          <a href="#project"><li class="ucsd-nav-right__item">Projects</li></a>
+          <a href="Joshua_Tjong_Resume.pdf"><li class="ucsd-nav-right__item">Résumé</li></a>
+          <a href="#about"><li class="ucsd-nav-right__item">About Me</li></a>
         </div>
     </div>
 </div>
@@ -34,23 +35,22 @@
       <h3>Assignment: </h3><p> Class project for COGS 108: Data Science in Practice.</br> Project completed in 2 months in a team of 6 people. </br></p>
       <h3>Research Question: </h3><p> What housing services are most successful in transitioning homeless individuals into permanent housing, ultimately preventing them from returning to homelessness? How have specific counties in California managed its homeless resources across each region and which areas in California are using its resources to full potential? </p>
       <h3>My Role: </h3><p> Data Cleaning, Data Analysis, and Data Visualization.</br> </p>
-      <h3>Research Process </h3>
-      <h4>Hypothesis:</h4>
+      <h3>Research Process - Hypothesis:</h3>
       <p> We hypothesize that counties that have a higher distribution of services that focus on providing long-term housing solutions like Permanent Supportive Housing will show a decrease in the overall homeless population over time we also want to see if change in years of service and population influence one another.</br> 
-      <h4>Data Description:</h4>
+      <h3>Research Process - Data Description:</h3>
       <div class="row">
           <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data1.png"/></div>
         </div>
       <p> </br>We utilizied data provided by the Department of Housing and Urban Development including 1) data from the Homeless Population (PIT) and 2) data from the Housing Inventory (HIC) for the years 2007-2016.</p></br></br><a href="https://www.hudexchange.info/resource/3031/pit-and-hic-data-since-2007/" style="font-size: 20px;">Data Source</a>
         
-      <h4>Data Cleaning/Pre-processing:</h4>
+      <h3>Research Process - Data Cleaning/Pre-processing:</h3>
       <div class="row">
           <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data3.png"/></div>
         </div>
       <p></br>The first step to cleaning the homelessness data was to load it into the excel sheets. We loaded in the excel sheet by year from 2007-2016 into the data frame. Since our data came from two excel sheets, we had to merge the data into one single data frame for the PIT and HIC. We did this my first renaming the HIC CoC to CoC number. This merging of the data frame allowed us to to more easily extract the data into graphs when we were exploring and graphing it. Next we extracted the CoC Number from the Total Homeless, Total Year-Round ES beds, Total TH Beds, and Total PSH Beds for each year in order to make each of the feature into a proportion to be placed into a Data Frame. Within our code, the proportions for each were placed into a matrix through the method “append”, so we would not lose the new value we just had calculated and to make it easier to grab when we were doing data visualization. This process allowed us to show a clearer and smaller table for the homelessness data we had originally had from the raw excel sheet. </br></br>For the next part, we placed the current data frame we had into a new one, so we could modify the new one without changing the current data. This allows us to explore and test the data without fear of losing the original data. At this point in the data cleaning, we are ready to start the process of analyzing some of the data, so the next part of our code takes head and tail (first five and last five part of our data set). We took the homelessness population and housing services interval of one year in order to create the data. We created a loop to go into all the CoC number to create a delta for each of the years. Then we placed all the years into a list and used panda series to get the rows of the data. We grabbed the ES, TH, and PSH proportions from ES, TH, PSH data for each year and each county. The code then explores the one and two year change between the ES, PSH, and TH by looking at the satisfaction rating to look at how the county are doing with their homelessness problem.
       </p>
 
-      <h4>Data Visualization:</h4>
+      <h3>Research Process - Data Visualization:</h3>
       <div class="row">
         <div class="col-sm-6"><img class="img-responsive" style="height:100%; width: 100%;" src="data4.png"/></div>
         <div class="col-sm-6"><img class="img-responsive" style="height: 100%; width: 100%;" src="data5.png"/></div>
@@ -60,7 +60,7 @@
       </br></br>Because our first four graphs depicted nearly 40 different county’s data, it was a bit overwhelming to look at which prevented us from noticing any interesting trajectories. We decided to break the data into more manageable chunks by instead plotting the ES, TH, and PSH proportions of each county onto their own graph. Underneath each graph, we plotted the corresponding change in homeless population for the respective counties to see if we can visually see any trends.
       </br></br>We chose to look at the counties with the largest change in homeless population size, seven in the increasing and seven in the decreasing directions.</p>
       
-      <h4>Data Analysis and Results:</h4>
+      <h3>Research Process - Data Analysis and Results:</h3>
       <div class="row">
           <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data6.png"/></div>
           <div class="col-sm-12"><img class="img-responsive" style="height: 100%; width: 100%;" src="data7.png"/></div>
@@ -68,10 +68,10 @@
       <p></br>First we completed linear regressions on our three different types of services as independent variable to see if we could find statistical significant from the services. After running linear regression the p-value we calculated shows that there is no statistical significance; however, the linear regression showed that the three different types of services were highly correlated. Due to this discovery, we decided to run a pearson's correlational r test on the services which supported our previous finding.
       </br></br>Since the data that we have has many variable we decided that we might need to try and use dimensionality reduction: that is to try and find a lower dimensional space that captures as much of the information as we can from the original, high-dimensional, dataset.</p>
 
-      <h4>Challenges, Discussion, and Conclusions:</h4>
+      <h3>Challenges, Discussion, and Conclusions:</h3>
        <p>After gathering, cleaning, and exploring our data, our data analysis did not lead us to any conclusive finding about whether different housing services provided have any significant effect on reducing the homeless population. Our attempt at running PCA on our data gave us results that were not easily interpretable, and thus require more extensive analysis to understand any possible present correlations. With analyzing data to a incredibly complex crisis such as homelessness it of course falls into potential confounds that can have an effect on our analysis. One issue with collecting data on homelessness in general is actually getting concrete data since those falling in and out of homelessness is so dynamic and changes constantly. We have to assume that the data we have received is an incomplete picture of the true population of homeless individuals in San Diego. Essentially what we have received is just a sample at a particular point of time and we are making observations based on that and assuming that the observations can be extended beyond those temporal and physical boundaries. In addition, data collected from HUD through the HMIS is incomplete as most people utilize the system (required to input data into the system if receiving funding from HUD), yet not all organizations that are servicing the homeless are utilizing this system (receiving funds from somewhere other than HUD). So that is valuable data again that we are missing.</p>
 
-      <h4>Final Product:</h4>
+      <h3>Final Product:</h3>
     </br>
     </br>
       <div class="row">
